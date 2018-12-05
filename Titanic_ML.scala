@@ -3,7 +3,7 @@
     {
       "text": "%spark\nval trainData \u003d \"/home/dskangu/다운로드/train.csv\"",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:16:39.517",
+      "dateUpdated": "2018-12-05 21:17:03.239",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -34,15 +34,15 @@
       "jobName": "paragraph_1543800286818_45935029",
       "id": "20181203-102446_1179082965",
       "dateCreated": "2018-12-03 10:24:46.818",
-      "dateStarted": "2018-12-04 22:16:39.872",
-      "dateFinished": "2018-12-04 22:17:01.536",
+      "dateStarted": "2018-12-05 21:17:03.393",
+      "dateFinished": "2018-12-05 21:17:22.132",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nval rawData \u003d sc.textFile(trainData)\nval columns \u003d rawData.first().split(\",\")",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:17:01.595",
+      "dateUpdated": "2018-12-05 21:17:22.158",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -85,15 +85,15 @@
       "jobName": "paragraph_1543800527577_164899850",
       "id": "20181203-102847_1583885311",
       "dateCreated": "2018-12-03 10:28:47.577",
-      "dateStarted": "2018-12-04 22:17:01.959",
-      "dateFinished": "2018-12-04 22:17:05.818",
+      "dateStarted": "2018-12-05 21:17:22.482",
+      "dateFinished": "2018-12-05 21:17:25.861",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nval sqlContext \u003d new org.apache.spark.sql.SQLContext(sc)\nimport org.apache.spark.sql.functions._\nimport sqlContext.implicits._",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:17:05.897",
+      "dateUpdated": "2018-12-05 21:17:25.911",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -116,7 +116,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "warning: there was one deprecation warning; re-run with -deprecation for details\nsqlContext: org.apache.spark.sql.SQLContext \u003d org.apache.spark.sql.SQLContext@43e99fc2\nimport org.apache.spark.sql.functions._\nimport sqlContext.implicits._\n"
+            "data": "warning: there was one deprecation warning; re-run with -deprecation for details\nsqlContext: org.apache.spark.sql.SQLContext \u003d org.apache.spark.sql.SQLContext@62a837e9\nimport org.apache.spark.sql.functions._\nimport sqlContext.implicits._\n"
           }
         ]
       },
@@ -124,15 +124,15 @@
       "jobName": "paragraph_1543800554020_-2021673250",
       "id": "20181203-102914_1912389649",
       "dateCreated": "2018-12-03 10:29:14.020",
-      "dateStarted": "2018-12-04 22:17:06.236",
-      "dateFinished": "2018-12-04 22:17:08.428",
+      "dateStarted": "2018-12-05 21:17:26.246",
+      "dateFinished": "2018-12-05 21:17:28.440",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nvar tmpdf \u003d sqlContext.read.format(\"com.databricks.spark.csv\").\noption(\"header\", \"true\").\noption(\"inferSchema\", \"true\").\nload(trainData).\ntoDF(columns : _*).\ncache()",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:17:08.451",
+      "dateUpdated": "2018-12-05 21:17:28.461",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -177,15 +177,15 @@
       "jobName": "paragraph_1543800745292_-1564143519",
       "id": "20181203-103225_1568246065",
       "dateCreated": "2018-12-03 10:32:25.292",
-      "dateStarted": "2018-12-04 22:17:08.637",
-      "dateFinished": "2018-12-04 22:17:12.592",
+      "dateStarted": "2018-12-05 21:17:28.702",
+      "dateFinished": "2018-12-05 21:17:33.126",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\ntmpdf.printSchema()",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:17:12.663",
+      "dateUpdated": "2018-12-05 21:17:33.138",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -216,15 +216,15 @@
       "jobName": "paragraph_1543841681043_-652769149",
       "id": "20181203-215441_32847832",
       "dateCreated": "2018-12-03 21:54:41.043",
-      "dateStarted": "2018-12-04 22:17:12.912",
-      "dateFinished": "2018-12-04 22:17:13.602",
+      "dateStarted": "2018-12-05 21:17:33.354",
+      "dateFinished": "2018-12-05 21:17:33.844",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\ntmpdf.show(20)",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:17:13.605",
+      "dateUpdated": "2018-12-05 21:17:33.845",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -267,15 +267,15 @@
       "jobName": "paragraph_1543842433776_539023731",
       "id": "20181203-220713_1269259812",
       "dateCreated": "2018-12-03 22:07:13.776",
-      "dateStarted": "2018-12-04 22:17:13.804",
-      "dateFinished": "2018-12-04 22:17:15.101",
+      "dateStarted": "2018-12-05 21:17:34.058",
+      "dateFinished": "2018-12-05 21:17:35.202",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\n\ntmpdf.describe().show()",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:17:15.197",
+      "dateUpdated": "2018-12-05 21:17:35.248",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -326,15 +326,15 @@
       "jobName": "paragraph_1543842440587_2047477920",
       "id": "20181203-220720_1339768921",
       "dateCreated": "2018-12-03 22:07:20.587",
-      "dateStarted": "2018-12-04 22:17:15.315",
-      "dateFinished": "2018-12-04 22:17:17.158",
+      "dateStarted": "2018-12-05 21:17:35.472",
+      "dateFinished": "2018-12-05 21:17:37.736",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\ntmpdf.filter(tmpdf(\"Sex\") \u003d\u003d\u003d \"male\").count() + tmpdf.filter(tmpdf(\"Sex\") \u003d\u003d\u003d \"female\").count()",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:17:17.224",
+      "dateUpdated": "2018-12-05 21:17:37.793",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -378,15 +378,15 @@
       "jobName": "paragraph_1543842478533_1848785587",
       "id": "20181203-220758_1692425155",
       "dateCreated": "2018-12-03 22:07:58.533",
-      "dateStarted": "2018-12-04 22:17:17.388",
-      "dateFinished": "2018-12-04 22:17:18.495",
+      "dateStarted": "2018-12-05 21:17:37.952",
+      "dateFinished": "2018-12-05 21:17:39.018",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\ntmpdf.select(\"Fare\").orderBy(asc(\"Fare\")).map(row \u003d\u003e row(0).asInstanceOf[Double]).collect()",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:17:18.576",
+      "dateUpdated": "2018-12-05 21:17:39.041",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -430,15 +430,15 @@
       "jobName": "paragraph_1543842996726_1234569816",
       "id": "20181203-221636_1032559712",
       "dateCreated": "2018-12-03 22:16:36.726",
-      "dateStarted": "2018-12-04 22:17:18.685",
-      "dateFinished": "2018-12-04 22:17:21.361",
+      "dateStarted": "2018-12-05 21:17:39.121",
+      "dateFinished": "2018-12-05 21:17:42.127",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\ntmpdf.registerTempTable(\"tmpdf\")",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:17:21.400",
+      "dateUpdated": "2018-12-05 21:17:42.236",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -469,15 +469,15 @@
       "jobName": "paragraph_1543843629559_432661447",
       "id": "20181203-222709_1720499988",
       "dateCreated": "2018-12-03 22:27:09.559",
-      "dateStarted": "2018-12-04 22:17:21.584",
-      "dateFinished": "2018-12-04 22:17:22.524",
+      "dateStarted": "2018-12-05 21:17:42.388",
+      "dateFinished": "2018-12-05 21:17:43.581",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n## 데이터 준비\n",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:17:22.600",
+      "dateUpdated": "2018-12-05 21:17:43.586",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -510,15 +510,15 @@
       "jobName": "paragraph_1543844547867_-1748849838",
       "id": "20181203-224227_1791638852",
       "dateCreated": "2018-12-03 22:42:27.867",
-      "dateStarted": "2018-12-04 22:17:22.760",
-      "dateFinished": "2018-12-04 22:17:24.542",
+      "dateStarted": "2018-12-05 21:17:43.693",
+      "dateFinished": "2018-12-05 21:17:46.609",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nval avgAge \u003d tmpdf.select(mean(\"Age\")).first()(0).asInstanceOf[Double]\ntmpdf \u003d tmpdf.na.fill(avgAge, Seq(\"Age\"))",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:17:24.548",
+      "dateUpdated": "2018-12-05 21:17:46.692",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -561,15 +561,15 @@
       "jobName": "paragraph_1543844296600_-603110009",
       "id": "20181203-223816_708218890",
       "dateCreated": "2018-12-03 22:38:16.600",
-      "dateStarted": "2018-12-04 22:17:24.665",
-      "dateFinished": "2018-12-04 22:17:26.185",
+      "dateStarted": "2018-12-05 21:17:46.843",
+      "dateFinished": "2018-12-05 21:17:48.310",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\ntmpdf.describe().show()",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:17:26.272",
+      "dateUpdated": "2018-12-05 21:17:48.341",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -612,15 +612,15 @@
       "jobName": "paragraph_1543844629713_2083395157",
       "id": "20181203-224349_746794943",
       "dateCreated": "2018-12-03 22:43:49.713",
-      "dateStarted": "2018-12-04 22:17:26.360",
-      "dateFinished": "2018-12-04 22:17:27.448",
+      "dateStarted": "2018-12-05 21:17:48.464",
+      "dateFinished": "2018-12-05 21:17:49.454",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nval toDouble \u003d sqlContext.udf.register(\"toDouble\", ((n : Int) \u003d\u003e {n.toDouble}))\nval df \u003d tmpdf.drop(\"Name\").drop(\"Cabin\").drop(\"Ticket\").drop(\"Embarked\").withColumn(\"Survived\", toDouble(tmpdf(\"Survived\")))",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:17:27.449",
+      "dateUpdated": "2018-12-05 21:17:49.539",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -651,15 +651,15 @@
       "jobName": "paragraph_1543844673180_1705406310",
       "id": "20181203-224433_588776081",
       "dateCreated": "2018-12-03 22:44:33.180",
-      "dateStarted": "2018-12-04 22:17:27.529",
-      "dateFinished": "2018-12-04 22:17:29.008",
+      "dateStarted": "2018-12-05 21:17:49.661",
+      "dateFinished": "2018-12-05 21:17:51.287",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\ndf.show()",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:17:29.017",
+      "dateUpdated": "2018-12-05 21:17:51.381",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -702,15 +702,15 @@
       "jobName": "paragraph_1543844873025_1470051400",
       "id": "20181203-224753_655917009",
       "dateCreated": "2018-12-03 22:47:53.025",
-      "dateStarted": "2018-12-04 22:17:29.108",
-      "dateFinished": "2018-12-04 22:17:29.934",
+      "dateStarted": "2018-12-05 21:17:51.517",
+      "dateFinished": "2018-12-05 21:17:52.363",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nimport org.apache.spark.ml.feature.StringIndexer\n\nval sexIndexer \u003d new StringIndexer().setInputCol(\"Sex\").setOutputCol(\"SexIndex\")",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:17:29.994",
+      "dateUpdated": "2018-12-05 21:17:52.422",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -733,7 +733,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "import org.apache.spark.ml.feature.StringIndexer\nsexIndexer: org.apache.spark.ml.feature.StringIndexer \u003d strIdx_ede5a71f0493\n"
+            "data": "import org.apache.spark.ml.feature.StringIndexer\nsexIndexer: org.apache.spark.ml.feature.StringIndexer \u003d strIdx_97fafb262e77\n"
           }
         ]
       },
@@ -741,15 +741,15 @@
       "jobName": "paragraph_1543844881001_540656327",
       "id": "20181203-224801_1085423922",
       "dateCreated": "2018-12-03 22:48:01.001",
-      "dateStarted": "2018-12-04 22:17:30.066",
-      "dateFinished": "2018-12-04 22:17:30.744",
+      "dateStarted": "2018-12-05 21:17:52.543",
+      "dateFinished": "2018-12-05 21:17:53.531",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nvar demonModel \u003d sexIndexer.fit(df)\ndemonModel.transform(df).select(\"Sex\", \"SexIndex\").show(5)",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:19:33.711",
+      "dateUpdated": "2018-12-05 21:17:53.531",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -772,7 +772,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "demonModel: org.apache.spark.ml.feature.StringIndexerModel \u003d strIdx_ede5a71f0493\n+------+--------+\n|   Sex|SexIndex|\n+------+--------+\n|  male|     0.0|\n|female|     1.0|\n|female|     1.0|\n|female|     1.0|\n|  male|     0.0|\n+------+--------+\nonly showing top 5 rows\n\n"
+            "data": "demonModel: org.apache.spark.ml.feature.StringIndexerModel \u003d strIdx_97fafb262e77\n+------+--------+\n|   Sex|SexIndex|\n+------+--------+\n|  male|     0.0|\n|female|     1.0|\n|female|     1.0|\n|female|     1.0|\n|  male|     0.0|\n+------+--------+\nonly showing top 5 rows\n\n"
           }
         ]
       },
@@ -783,8 +783,8 @@
           "tooltip": "View in Spark web UI",
           "group": "spark",
           "values": [
-            "http://10.0.2.15:4040/jobs/job?id\u003d15",
-            "http://10.0.2.15:4040/jobs/job?id\u003d16"
+            "http://10.0.2.15:4040/jobs/job?id\u003d13",
+            "http://10.0.2.15:4040/jobs/job?id\u003d14"
           ],
           "interpreterSettingId": "spark"
         }
@@ -793,15 +793,15 @@
       "jobName": "paragraph_1543845003839_12441082",
       "id": "20181203-225003_619873208",
       "dateCreated": "2018-12-03 22:50:03.839",
-      "dateStarted": "2018-12-04 22:19:33.755",
-      "dateFinished": "2018-12-04 22:19:35.383",
+      "dateStarted": "2018-12-05 21:17:53.681",
+      "dateFinished": "2018-12-05 21:17:55.587",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nimport org.apache.spark.ml.feature.Bucketizer\n\nval fareSplits \u003d Array(0.0, 50.0, 100.0, 150.0, 200.0, Double.PositiveInfinity)\nval fareBucket \u003d new Bucketizer().setInputCol(\"Fare\").setOutputCol(\"FareBucket\").setSplits(fareSplits)",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:40:14.319",
+      "dateUpdated": "2018-12-05 21:17:55.685",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -824,7 +824,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "import org.apache.spark.ml.feature.Bucketizer\nfareSplits: Array[Double] \u003d Array(0.0, 50.0, 100.0, 150.0, 200.0, Infinity)\nfareBucket: org.apache.spark.ml.feature.Bucketizer \u003d bucketizer_d5073e5559c2\n"
+            "data": "import org.apache.spark.ml.feature.Bucketizer\nfareSplits: Array[Double] \u003d Array(0.0, 50.0, 100.0, 150.0, 200.0, Infinity)\nfareBucket: org.apache.spark.ml.feature.Bucketizer \u003d bucketizer_9e1162f1014c\n"
           }
         ]
       },
@@ -832,15 +832,15 @@
       "jobName": "paragraph_1543929499831_-563543240",
       "id": "20181204-221819_1132019742",
       "dateCreated": "2018-12-04 22:18:19.831",
-      "dateStarted": "2018-12-04 22:40:14.381",
-      "dateFinished": "2018-12-04 22:40:15.513",
+      "dateStarted": "2018-12-05 21:17:55.751",
+      "dateFinished": "2018-12-05 21:17:57.060",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nfareBucket.transform(df).select(\"Fare\", \"FareBucket\").show(30)",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:40:15.590",
+      "dateUpdated": "2018-12-05 21:17:57.156",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -874,7 +874,7 @@
           "tooltip": "View in Spark web UI",
           "group": "spark",
           "values": [
-            "http://10.0.2.15:4040/jobs/job?id\u003d21"
+            "http://10.0.2.15:4040/jobs/job?id\u003d15"
           ],
           "interpreterSettingId": "spark"
         }
@@ -883,15 +883,15 @@
       "jobName": "paragraph_1543929842825_640167030",
       "id": "20181204-222402_124996783",
       "dateCreated": "2018-12-04 22:24:02.825",
-      "dateStarted": "2018-12-04 22:40:15.668",
-      "dateFinished": "2018-12-04 22:40:16.493",
+      "dateStarted": "2018-12-05 21:17:57.229",
+      "dateFinished": "2018-12-05 21:17:58.117",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark\nimport org.apache.spark.ml.feature.VectorAssembler\n\nval assembler \u003d new VectorAssembler().setInputCols(Array(\"Pclass\", \"SexIndex\", \"Age\", \"SibSp\", \"Parch\", \"FareBucekt\")).setOutputCol(\"tmpFeatures\")\n",
+      "text": "%spark\nimport org.apache.spark.ml.feature.VectorAssembler\n\nval assembler \u003d new VectorAssembler().setInputCols(Array(\"Pclass\", \"SexIndex\", \"Age\", \"SibSp\", \"Parch\", \"FareBucket\")).setOutputCol(\"tmpFeatures\")\n",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:40:16.559",
+      "dateUpdated": "2018-12-05 21:31:11.394",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -914,7 +914,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "import org.apache.spark.ml.feature.VectorAssembler\nassembler: org.apache.spark.ml.feature.VectorAssembler \u003d vecAssembler_e51b2f517330\n"
+            "data": "import org.apache.spark.ml.feature.VectorAssembler\nassembler: org.apache.spark.ml.feature.VectorAssembler \u003d vecAssembler_95d643263f40\n"
           }
         ]
       },
@@ -922,15 +922,15 @@
       "jobName": "paragraph_1543929957807_-400793079",
       "id": "20181204-222557_650072894",
       "dateCreated": "2018-12-04 22:25:57.807",
-      "dateStarted": "2018-12-04 22:40:16.654",
-      "dateFinished": "2018-12-04 22:40:17.436",
+      "dateStarted": "2018-12-05 21:31:11.460",
+      "dateFinished": "2018-12-05 21:31:12.106",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nimport org.apache.spark.ml.feature.Normalizer\n\nval normalizer \u003d new Normalizer().setInputCol(\"tmpFeatures\").setOutputCol(\"features\")",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:40:17.451",
+      "dateUpdated": "2018-12-05 21:31:12.156",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -953,7 +953,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "import org.apache.spark.ml.feature.Normalizer\nnormalizer: org.apache.spark.ml.feature.Normalizer \u003d normalizer_604d769cec3a\n"
+            "data": "import org.apache.spark.ml.feature.Normalizer\nnormalizer: org.apache.spark.ml.feature.Normalizer \u003d normalizer_a6489203dc29\n"
           }
         ]
       },
@@ -961,15 +961,15 @@
       "jobName": "paragraph_1543930041660_271128313",
       "id": "20181204-222721_1297452786",
       "dateCreated": "2018-12-04 22:27:21.660",
-      "dateStarted": "2018-12-04 22:40:17.572",
-      "dateFinished": "2018-12-04 22:40:18.173",
+      "dateStarted": "2018-12-05 21:31:12.237",
+      "dateFinished": "2018-12-05 21:31:13.109",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nimport org.apache.spark.ml.classification.LogisticRegression\n\nval logreg \u003d new LogisticRegression().setMaxIter(10)\nlogreg.setLabelCol(\"Survived\")",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:40:18.263",
+      "dateUpdated": "2018-12-05 21:31:13.149",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -992,7 +992,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "import org.apache.spark.ml.classification.LogisticRegression\nlogreg: org.apache.spark.ml.classification.LogisticRegression \u003d logreg_8061469527e3\nres76: org.apache.spark.ml.classification.LogisticRegression \u003d logreg_8061469527e3\n"
+            "data": "import org.apache.spark.ml.classification.LogisticRegression\nlogreg: org.apache.spark.ml.classification.LogisticRegression \u003d logreg_fb32e858e2ea\nres42: org.apache.spark.ml.classification.LogisticRegression \u003d logreg_fb32e858e2ea\n"
           }
         ]
       },
@@ -1000,15 +1000,15 @@
       "jobName": "paragraph_1543930108358_-687234513",
       "id": "20181204-222828_672478658",
       "dateCreated": "2018-12-04 22:28:28.358",
-      "dateStarted": "2018-12-04 22:40:18.327",
-      "dateFinished": "2018-12-04 22:40:19.275",
+      "dateStarted": "2018-12-05 21:31:13.258",
+      "dateFinished": "2018-12-05 21:31:14.026",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nimport org.apache.spark.ml.Pipeline\n\nval pipeline \u003d new Pipeline().setStages(Array(fareBucket, sexIndexer, assembler, normalizer, logreg))",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:40:19.333",
+      "dateUpdated": "2018-12-05 21:31:14.051",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1031,7 +1031,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "import org.apache.spark.ml.Pipeline\npipeline: org.apache.spark.ml.Pipeline \u003d pipeline_b0f034907fe2\n"
+            "data": "import org.apache.spark.ml.Pipeline\npipeline: org.apache.spark.ml.Pipeline \u003d pipeline_f07691cd6975\n"
           }
         ]
       },
@@ -1039,15 +1039,15 @@
       "jobName": "paragraph_1543930260620_-1148895417",
       "id": "20181204-223100_453737508",
       "dateCreated": "2018-12-04 22:31:00.620",
-      "dateStarted": "2018-12-04 22:40:19.384",
-      "dateFinished": "2018-12-04 22:40:20.048",
+      "dateStarted": "2018-12-05 21:31:14.217",
+      "dateFinished": "2018-12-05 21:31:14.964",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nval splits \u003d df.randomSplit(Array(0.7, 0.3), seed \u003d 9L)\nval train \u003d splits(0).cache()\nval test \u003d splits(1).cache",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:40:20.087",
+      "dateUpdated": "2018-12-05 21:31:15.031",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1078,15 +1078,658 @@
       "jobName": "paragraph_1543930477177_1478335947",
       "id": "20181204-223437_375029705",
       "dateCreated": "2018-12-04 22:34:37.177",
-      "dateStarted": "2018-12-04 22:40:20.159",
-      "dateFinished": "2018-12-04 22:40:20.938",
+      "dateStarted": "2018-12-05 21:31:15.121",
+      "dateFinished": "2018-12-05 21:31:16.035",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nval model \u003d pipeline.fit(train)\nval result \u003d model.transform(test)",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:40:20.967",
+      "dateUpdated": "2018-12-05 21:31:16.132",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "model: org.apache.spark.ml.PipelineModel \u003d pipeline_f07691cd6975\nresult: org.apache.spark.sql.DataFrame \u003d [PassengerId: int, Survived: double ... 13 more fields]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://10.0.2.15:4040/jobs/job?id\u003d17",
+            "http://10.0.2.15:4040/jobs/job?id\u003d18",
+            "http://10.0.2.15:4040/jobs/job?id\u003d19",
+            "http://10.0.2.15:4040/jobs/job?id\u003d20",
+            "http://10.0.2.15:4040/jobs/job?id\u003d21",
+            "http://10.0.2.15:4040/jobs/job?id\u003d22",
+            "http://10.0.2.15:4040/jobs/job?id\u003d23",
+            "http://10.0.2.15:4040/jobs/job?id\u003d24",
+            "http://10.0.2.15:4040/jobs/job?id\u003d25",
+            "http://10.0.2.15:4040/jobs/job?id\u003d26",
+            "http://10.0.2.15:4040/jobs/job?id\u003d27",
+            "http://10.0.2.15:4040/jobs/job?id\u003d28",
+            "http://10.0.2.15:4040/jobs/job?id\u003d29",
+            "http://10.0.2.15:4040/jobs/job?id\u003d30"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1543930592613_820007235",
+      "id": "20181204-223632_108107590",
+      "dateCreated": "2018-12-04 22:36:32.613",
+      "dateStarted": "2018-12-05 21:31:16.212",
+      "dateFinished": "2018-12-05 21:31:18.766",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nimport org.apache.spark.mllib.evaluation.BinaryClassificationMetrics\n\nval predictionAndLabel \u003d result.select(\"prediction\", \"Survived\").map(row \u003d\u003e (row.get(0).asInstanceOf[(Double, Double)])).rdd\nval metrics \u003d new BinaryClassificationMetrics(predictionAndLabel)\n\nprintln(\"Area Under ROC \u003d ${metrics.areaUnderROC()}\\n\")",
+      "user": "dskang",
+      "dateUpdated": "2018-12-05 21:52:05.431",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.mllib.evaluation.BinaryClassificationMetrics\npredictionAndLabel: org.apache.spark.rdd.RDD[(Double, Double)] \u003d MapPartitionsRDD[153] at rdd at \u003cconsole\u003e:86\nmetrics: org.apache.spark.mllib.evaluation.BinaryClassificationMetrics \u003d org.apache.spark.mllib.evaluation.BinaryClassificationMetrics@2ab100cc\nArea Under ROC \u003d ${metrics.areaUnderROC()}\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544013130725_-914701213",
+      "id": "20181205-213210_656188249",
+      "dateCreated": "2018-12-05 21:32:10.725",
+      "dateStarted": "2018-12-05 21:52:05.484",
+      "dateFinished": "2018-12-05 21:52:06.674",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nvar model \u003d pipeline.fit(df)",
+      "user": "dskang",
+      "dateUpdated": "2018-12-05 21:56:57.174",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "model: org.apache.spark.ml.PipelineModel \u003d pipeline_f07691cd6975\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://10.0.2.15:4040/jobs/job?id\u003d43",
+            "http://10.0.2.15:4040/jobs/job?id\u003d44",
+            "http://10.0.2.15:4040/jobs/job?id\u003d45",
+            "http://10.0.2.15:4040/jobs/job?id\u003d46",
+            "http://10.0.2.15:4040/jobs/job?id\u003d47",
+            "http://10.0.2.15:4040/jobs/job?id\u003d48",
+            "http://10.0.2.15:4040/jobs/job?id\u003d49",
+            "http://10.0.2.15:4040/jobs/job?id\u003d50",
+            "http://10.0.2.15:4040/jobs/job?id\u003d51",
+            "http://10.0.2.15:4040/jobs/job?id\u003d52",
+            "http://10.0.2.15:4040/jobs/job?id\u003d53",
+            "http://10.0.2.15:4040/jobs/job?id\u003d54",
+            "http://10.0.2.15:4040/jobs/job?id\u003d55",
+            "http://10.0.2.15:4040/jobs/job?id\u003d56"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1544014491751_1663098344",
+      "id": "20181205-215451_155516742",
+      "dateCreated": "2018-12-05 21:54:51.751",
+      "dateStarted": "2018-12-05 21:56:57.212",
+      "dateFinished": "2018-12-05 21:56:58.763",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nvar testdf \u003d sqlContext.read.format(\"com.databricks.spark.csv\").\noption(\"header\", \"true\").\noption(\"inferSchema\", \"true\").\nload(\"/home/dskangu/다운로드/test.csv\").\ntoDF().\ncache()\n",
+      "user": "dskang",
+      "dateUpdated": "2018-12-05 21:58:21.621",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "testdf: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [PassengerId: int, Pclass: int ... 9 more fields]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://10.0.2.15:4040/jobs/job?id\u003d57",
+            "http://10.0.2.15:4040/jobs/job?id\u003d58",
+            "http://10.0.2.15:4040/jobs/job?id\u003d59"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1544014617174_-1001282779",
+      "id": "20181205-215657_1703659463",
+      "dateCreated": "2018-12-05 21:56:57.174",
+      "dateStarted": "2018-12-05 21:58:21.650",
+      "dateFinished": "2018-12-05 21:58:22.197",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\ntestdf.describe().show()",
+      "user": "dskang",
+      "dateUpdated": "2018-12-05 21:59:25.934",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+------------------+------------------+------------------+------------------+------------------+------------------+\n|summary|       PassengerId|            Pclass|               Age|             SibSp|             Parch|              Fare|\n+-------+------------------+------------------+------------------+------------------+------------------+------------------+\n|  count|               418|               418|               332|               418|               418|               417|\n|   mean|            1100.5|2.2655502392344498|30.272590361445783|0.4473684210526316|0.3923444976076555|  35.6271884892086|\n| stddev|120.81045760473994|0.8418375519640503|14.181209235624424|0.8967595611217135|0.9814288785371694|55.907576179973844|\n|    min|               892|                 1|              0.17|                 0|                 0|               0.0|\n|    max|              1309|                 3|              76.0|                 8|                 9|          512.3292|\n+-------+------------------+------------------+------------------+------------------+------------------+------------------+\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://10.0.2.15:4040/jobs/job?id\u003d61"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1544014692007_1960465926",
+      "id": "20181205-215812_746179036",
+      "dateCreated": "2018-12-05 21:58:12.007",
+      "dateStarted": "2018-12-05 21:59:25.968",
+      "dateFinished": "2018-12-05 21:59:26.656",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\ntestdf \u003d testdf.withColumn(\"Survived\", toDouble(testdf(\"PassengerId\"))).drop(\"Name\").drop(\"Ticket\").drop(\"Cabin\").drop(\"Embarked\")\ntestdf.show",
+      "user": "dskang",
+      "dateUpdated": "2018-12-05 22:00:16.230",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "testdf: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [PassengerId: int, Pclass: int ... 6 more fields]\n+-----------+------+------+----+-----+-----+-------+--------+\n|PassengerId|Pclass|   Sex| Age|SibSp|Parch|   Fare|Survived|\n+-----------+------+------+----+-----+-----+-------+--------+\n|        892|     3|  male|34.5|    0|    0| 7.8292|   892.0|\n|        893|     3|female|47.0|    1|    0|    7.0|   893.0|\n|        894|     2|  male|62.0|    0|    0| 9.6875|   894.0|\n|        895|     3|  male|27.0|    0|    0| 8.6625|   895.0|\n|        896|     3|female|22.0|    1|    1|12.2875|   896.0|\n|        897|     3|  male|14.0|    0|    0|  9.225|   897.0|\n|        898|     3|female|30.0|    0|    0| 7.6292|   898.0|\n|        899|     2|  male|26.0|    1|    1|   29.0|   899.0|\n|        900|     3|female|18.0|    0|    0| 7.2292|   900.0|\n|        901|     3|  male|21.0|    2|    0|  24.15|   901.0|\n|        902|     3|  male|null|    0|    0| 7.8958|   902.0|\n|        903|     1|  male|46.0|    0|    0|   26.0|   903.0|\n|        904|     1|female|23.0|    1|    0|82.2667|   904.0|\n|        905|     2|  male|63.0|    1|    0|   26.0|   905.0|\n|        906|     1|female|47.0|    1|    0| 61.175|   906.0|\n|        907|     2|female|24.0|    1|    0|27.7208|   907.0|\n|        908|     2|  male|35.0|    0|    0|  12.35|   908.0|\n|        909|     3|  male|21.0|    0|    0|  7.225|   909.0|\n|        910|     3|female|27.0|    1|    0|  7.925|   910.0|\n|        911|     3|female|45.0|    0|    0|  7.225|   911.0|\n+-----------+------+------+----+-----+-----+-------+--------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://10.0.2.15:4040/jobs/job?id\u003d62"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1544014711220_-421582419",
+      "id": "20181205-215831_1104018236",
+      "dateCreated": "2018-12-05 21:58:31.220",
+      "dateStarted": "2018-12-05 22:00:16.275",
+      "dateFinished": "2018-12-05 22:00:16.888",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nvar testAvgAge \u003d testdf.select(mean(\"Age\")).first()(0).asInstanceOf[Double]\ntestdf \u003d testdf.na.fill(testAvgAge, Seq(\"Age\"))",
+      "user": "dskang",
+      "dateUpdated": "2018-12-05 22:01:57.061",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "testAvgAge: Double \u003d 30.272590361445783\ntestdf: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [PassengerId: int, Pclass: int ... 6 more fields]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://10.0.2.15:4040/jobs/job?id\u003d65"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1544014816230_1833859759",
+      "id": "20181205-220016_938065416",
+      "dateCreated": "2018-12-05 22:00:16.230",
+      "dateStarted": "2018-12-05 22:01:57.117",
+      "dateFinished": "2018-12-05 22:01:57.920",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nvar testAvgFare \u003d testdf.select(mean(\"Fare\")).first()(0).asInstanceOf[Double]\ntestdf \u003d testdf.na.fill(testAvgFare, Seq(\"Fare\"))",
+      "user": "dskang",
+      "dateUpdated": "2018-12-05 22:03:09.695",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "testAvgFare: Double \u003d 35.6271884892086\ntestdf: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [PassengerId: int, Pclass: int ... 6 more fields]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://10.0.2.15:4040/jobs/job?id\u003d66"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1544014901990_-1001573762",
+      "id": "20181205-220141_284114095",
+      "dateCreated": "2018-12-05 22:01:41.991",
+      "dateStarted": "2018-12-05 22:03:09.747",
+      "dateFinished": "2018-12-05 22:03:10.620",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\ntestdf.describe().show()",
+      "user": "dskang",
+      "dateUpdated": "2018-12-05 22:03:51.142",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+\n|summary|       PassengerId|            Pclass|               Age|             SibSp|             Parch|              Fare|          Survived|\n+-------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+\n|  count|               418|               418|               418|               418|               418|               418|               418|\n|   mean|            1100.5|2.2655502392344498|30.272590361445815|0.4473684210526316|0.3923444976076555|  35.6271884892086|            1100.5|\n| stddev|120.81045760473994|0.8418375519640503|12.634534168325061|0.8967595611217135|0.9814288785371694|55.840500479541056|120.81045760473994|\n|    min|               892|                 1|              0.17|                 0|                 0|               0.0|             892.0|\n|    max|              1309|                 3|              76.0|                 8|                 9|          512.3292|            1309.0|\n+-------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://10.0.2.15:4040/jobs/job?id\u003d67"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1544014998862_-37783908",
+      "id": "20181205-220318_1825410243",
+      "dateCreated": "2018-12-05 22:03:18.862",
+      "dateStarted": "2018-12-05 22:03:51.188",
+      "dateFinished": "2018-12-05 22:03:52.064",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval submit_result \u003d model.transform(testdf)",
+      "user": "dskang",
+      "dateUpdated": "2018-12-05 22:04:12.462",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "submit_result: org.apache.spark.sql.DataFrame \u003d [PassengerId: int, Pclass: int ... 13 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544015031142_549107844",
+      "id": "20181205-220351_897490816",
+      "dateCreated": "2018-12-05 22:03:51.142",
+      "dateStarted": "2018-12-05 22:04:12.509",
+      "dateFinished": "2018-12-05 22:04:13.086",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nsubmit_result.select(\"PassengerId\", \"prediction\").show(20)",
+      "user": "dskang",
+      "dateUpdated": "2018-12-05 22:04:42.895",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------+----------+\n|PassengerId|prediction|\n+-----------+----------+\n|        892|       0.0|\n|        893|       0.0|\n|        894|       0.0|\n|        895|       0.0|\n|        896|       1.0|\n|        897|       0.0|\n|        898|       1.0|\n|        899|       0.0|\n|        900|       1.0|\n|        901|       0.0|\n|        902|       0.0|\n|        903|       0.0|\n|        904|       1.0|\n|        905|       0.0|\n|        906|       0.0|\n|        907|       1.0|\n|        908|       0.0|\n|        909|       0.0|\n|        910|       0.0|\n|        911|       0.0|\n+-----------+----------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://10.0.2.15:4040/jobs/job?id\u003d68"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1544015052462_1101009539",
+      "id": "20181205-220412_740093131",
+      "dateCreated": "2018-12-05 22:04:12.462",
+      "dateStarted": "2018-12-05 22:04:42.932",
+      "dateFinished": "2018-12-05 22:04:43.537",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval testRdd \u003d submit_result.select(\"PassengerId\", \"prediction\").rdd",
+      "user": "dskang",
+      "dateUpdated": "2018-12-05 22:05:10.478",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "testRdd: org.apache.spark.rdd.RDD[org.apache.spark.sql.Row] \u003d MapPartitionsRDD[257] at rdd at \u003cconsole\u003e:82\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544015079687_-948426969",
+      "id": "20181205-220439_1696826721",
+      "dateCreated": "2018-12-05 22:04:39.687",
+      "dateStarted": "2018-12-05 22:05:10.518",
+      "dateFinished": "2018-12-05 22:05:10.942",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval header \u003d sc.parallelize(Array(\"passengerId,Survived\"))\nval body \u003d testRdd.map(row \u003d\u003e row(0).asInstanceOf[Int] + \",\" + row(1).asInstanceOf[Double].toInt)",
+      "user": "dskang",
+      "dateUpdated": "2018-12-05 22:06:13.964",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "header: org.apache.spark.rdd.RDD[String] \u003d ParallelCollectionRDD[258] at parallelize at \u003cconsole\u003e:50\nbody: org.apache.spark.rdd.RDD[String] \u003d MapPartitionsRDD[259] at map at \u003cconsole\u003e:84\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544015110478_527560876",
+      "id": "20181205-220510_107541302",
+      "dateCreated": "2018-12-05 22:05:10.479",
+      "dateStarted": "2018-12-05 22:06:14.012",
+      "dateFinished": "2018-12-05 22:06:14.842",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nheader.union(body).saveAsTextFile(\"home/dskangu/다운로드/result.csv\")",
+      "user": "dskang",
+      "dateUpdated": "2018-12-05 22:11:25.762",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1109,32 +1752,78 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "java.lang.IllegalArgumentException: Field \"FareBucekt\" does not exist.\n  at org.apache.spark.sql.types.StructType$$anonfun$apply$1.apply(StructType.scala:228)\n  at org.apache.spark.sql.types.StructType$$anonfun$apply$1.apply(StructType.scala:228)\n  at scala.collection.MapLike$class.getOrElse(MapLike.scala:128)\n  at scala.collection.AbstractMap.getOrElse(Map.scala:59)\n  at org.apache.spark.sql.types.StructType.apply(StructType.scala:227)\n  at org.apache.spark.ml.feature.VectorAssembler$$anonfun$5.apply(VectorAssembler.scala:116)\n  at org.apache.spark.ml.feature.VectorAssembler$$anonfun$5.apply(VectorAssembler.scala:116)\n  at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)\n  at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)\n  at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)\n  at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)\n  at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)\n  at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:186)\n  at org.apache.spark.ml.feature.VectorAssembler.transformSchema(VectorAssembler.scala:116)\n  at org.apache.spark.ml.Pipeline$$anonfun$transformSchema$4.apply(Pipeline.scala:180)\n  at org.apache.spark.ml.Pipeline$$anonfun$transformSchema$4.apply(Pipeline.scala:180)\n  at scala.collection.IndexedSeqOptimized$class.foldl(IndexedSeqOptimized.scala:57)\n  at scala.collection.IndexedSeqOptimized$class.foldLeft(IndexedSeqOptimized.scala:66)\n  at scala.collection.mutable.ArrayOps$ofRef.foldLeft(ArrayOps.scala:186)\n  at org.apache.spark.ml.Pipeline.transformSchema(Pipeline.scala:180)\n  at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:70)\n  at org.apache.spark.ml.Pipeline.fit(Pipeline.scala:132)\n  ... 56 elided\n"
+            "data": "org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory file:/home/dskangu/home/dskangu/다운로드/result.csv already exists\n  at org.apache.hadoop.mapred.FileOutputFormat.checkOutputSpecs(FileOutputFormat.java:131)\n  at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1.apply$mcV$sp(PairRDDFunctions.scala:1184)\n  at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1.apply(PairRDDFunctions.scala:1161)\n  at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1.apply(PairRDDFunctions.scala:1161)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)\n  at org.apache.spark.rdd.RDD.withScope(RDD.scala:358)\n  at org.apache.spark.rdd.PairRDDFunctions.saveAsHadoopDataset(PairRDDFunctions.scala:1161)\n  at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopFile$4.apply$mcV$sp(PairRDDFunctions.scala:1064)\n  at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopFile$4.apply(PairRDDFunctions.scala:1030)\n  at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopFile$4.apply(PairRDDFunctions.scala:1030)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)\n  at org.apache.spark.rdd.RDD.withScope(RDD.scala:358)\n  at org.apache.spark.rdd.PairRDDFunctions.saveAsHadoopFile(PairRDDFunctions.scala:1030)\n  at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopFile$1.apply$mcV$sp(PairRDDFunctions.scala:956)\n  at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopFile$1.apply(PairRDDFunctions.scala:956)\n  at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopFile$1.apply(PairRDDFunctions.scala:956)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)\n  at org.apache.spark.rdd.RDD.withScope(RDD.scala:358)\n  at org.apache.spark.rdd.PairRDDFunctions.saveAsHadoopFile(PairRDDFunctions.scala:955)\n  at org.apache.spark.rdd.RDD$$anonfun$saveAsTextFile$1.apply$mcV$sp(RDD.scala:1459)\n  at org.apache.spark.rdd.RDD$$anonfun$saveAsTextFile$1.apply(RDD.scala:1438)\n  at org.apache.spark.rdd.RDD$$anonfun$saveAsTextFile$1.apply(RDD.scala:1438)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)\n  at org.apache.spark.rdd.RDD.withScope(RDD.scala:358)\n  at org.apache.spark.rdd.RDD.saveAsTextFile(RDD.scala:1438)\n  ... 56 elided\n"
           }
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1543930592613_820007235",
-      "id": "20181204-223632_108107590",
-      "dateCreated": "2018-12-04 22:36:32.613",
-      "dateStarted": "2018-12-04 22:40:21.001",
-      "dateFinished": "2018-12-04 22:40:21.434",
+      "jobName": "paragraph_1544015173964_-1801933017",
+      "id": "20181205-220613_1187973146",
+      "dateCreated": "2018-12-05 22:06:13.964",
+      "dateStarted": "2018-12-05 22:11:25.826",
+      "dateFinished": "2018-12-05 22:11:26.298",
       "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\ntestRdd.map(row \u003d\u003e row(0).asInstanceOf[Int] + \",\" + row(1).asInstanceOf[Double].toInt).foreach(println)",
+      "user": "dskang",
+      "dateUpdated": "2018-12-05 22:07:53.735",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://10.0.2.15:4040/jobs/job?id\u003d70"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1544015203175_1856464070",
+      "id": "20181205-220643_1164797055",
+      "dateCreated": "2018-12-05 22:06:43.175",
+      "dateStarted": "2018-12-05 22:07:53.793",
+      "dateFinished": "2018-12-05 22:07:54.403",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\n",
       "user": "dskang",
-      "dateUpdated": "2018-12-04 22:36:47.831",
+      "dateUpdated": "2018-12-05 22:07:53.736",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1543930607831_1296045766",
-      "id": "20181204-223647_1919775528",
-      "dateCreated": "2018-12-04 22:36:47.831",
+      "jobName": "paragraph_1544015273735_-1480774711",
+      "id": "20181205-220753_305556212",
+      "dateCreated": "2018-12-05 22:07:53.735",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
